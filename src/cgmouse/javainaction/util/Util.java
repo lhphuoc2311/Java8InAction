@@ -3,8 +3,6 @@ package cgmouse.javainaction.util;
 import java.util.Arrays;
 import java.util.List;
 
-import cgmouse.javainaction.chap1.passcode.Apple;
-
 public class Util {
 
     public static List<Apple> inventoryApples = Arrays.asList(

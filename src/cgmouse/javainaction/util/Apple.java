@@ -1,6 +1,4 @@
-package cgmouse.javainaction.chap1.passcode;
-
-import cgmouse.javainaction.util.Corlor;
+package cgmouse.javainaction.util;
 
 public class Apple {
 

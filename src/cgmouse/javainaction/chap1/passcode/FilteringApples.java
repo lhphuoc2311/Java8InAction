@@ -3,6 +3,7 @@ package cgmouse.javainaction.chap1.passcode;
 import java.util.ArrayList;
 import java.util.List;
 
+import cgmouse.javainaction.util.Apple;
 import cgmouse.javainaction.util.Corlor;
 
 public class FilteringApples {
