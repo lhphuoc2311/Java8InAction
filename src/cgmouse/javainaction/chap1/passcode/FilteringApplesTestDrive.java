@@ -6,6 +6,8 @@ public class FilteringApplesTestDrive {
     public static void main(String[] args) {
 
         Util.printAppleList(FilteringApples.filterGreenApples(Util.inventoryApples));
+
+        Util.printAppleList(FilteringApples.filterHeavyApples(Util.inventoryApples));
         
     }
     

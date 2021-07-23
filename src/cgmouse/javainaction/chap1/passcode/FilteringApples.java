@@ -16,5 +16,16 @@ public class FilteringApples {
         }
         return result;
     }
+
+    public static List<Apple> filterHeavyApples(List<Apple> inventory){
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple : inventory) {
+            if(apple.getWeight() > 150){
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
     
 }
