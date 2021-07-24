@@ -6,7 +6,7 @@ import java.util.List;
 import cgmouse.javainaction.util.Apple;
 import cgmouse.javainaction.util.Corlor;
 
-public class FilteringApplseJava8 {
+public class FilteringApplesJava8 {
 
     public static boolean isGreenApple(Apple apple){
         return Corlor.GREEN.equals(apple.getCorlor());
@@ -16,7 +16,7 @@ public class FilteringApplseJava8 {
         return apple.getWeight() > 150;
     }
     
-    public static List<Apple> filterApplesJava8(List<Apple> apples, Predicate<Apple> p){
+    public static List<Apple> filterApples(List<Apple> apples, Predicate<Apple> p){
         List<Apple> result = new ArrayList<>();
         for (Apple apple : apples) {
             if(p.test(apple)){
