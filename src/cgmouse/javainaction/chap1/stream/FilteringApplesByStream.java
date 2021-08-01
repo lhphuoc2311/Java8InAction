@@ -8,6 +8,8 @@ import cgmouse.javainaction.util.Util;
 
 public class FilteringApplesByStream {
 
+    //SEQUENTIALLY
+
     public static List<Apple> filterHeavyApples(){
         List<Apple> heavyApples;
         heavyApples = Util.inventoryApples.stream()
@@ -22,6 +24,16 @@ public class FilteringApplesByStream {
             .filter((Apple a) -> a.getCorlor().equals(Corlor.GREEN))
             .collect(toList());
         return greenApples;
+    }
+
+    //PARALLEL PROCESSING
+
+    public static List<Apple> filterRedApplesByParallelProcess(){
+        List<Apple> redApples;
+        redApples = Util.inventoryApples.parallelStream()
+            .filter((Apple a) -> a.getCorlor().equals(Corlor.RED))
+            .collect(toList());
+        return redApples;
     }
     
 }
