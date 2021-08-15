@@ -2,7 +2,7 @@ package cgmouse.javainaction.util;
 
 public class Apple {
 
-    private int weight = 0;
+    private Integer weight = 0;
     private Corlor corlor;
 
     public Apple(int weight, Corlor corlor) {
@@ -10,7 +10,7 @@ public class Apple {
         this.corlor = corlor;
     }
 
-    public int getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
