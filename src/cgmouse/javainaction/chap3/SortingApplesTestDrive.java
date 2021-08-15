@@ -10,14 +10,7 @@ public class SortingApplesTestDrive {
     public static void main(String[] args) {
         List<Apple> inventory = Util.inventoryApples;
 
-        inventory.sort(new Comparator<Apple>(){
-
-            @Override
-            public int compare(Apple o1, Apple o2) {
-                return o1.getWeight().compareTo(o2.getWeight());
-            }
-            
-        });
+        inventory.sort((Apple a1, Apple a2) -> a1.getWeight().compareTo(a2.getWeight()));
 
         Util.printAppleList(inventory);
     }
