@@ -6,9 +6,11 @@ import java.util.List;
 public class Util {
 
     public static List<Apple> inventoryApples = Arrays.asList(
-        new Apple(90, Corlor.GREEN),
-        new Apple(155, Corlor.GREEN),
-        new Apple(120, Corlor.RED));
+        new Apple(90, Corlor.GREEN, Country.U),
+        new Apple(155, Corlor.GREEN, Country.V),
+        new Apple(120, Corlor.BLUE, Country.U),
+        new Apple(160, Corlor.RED, Country.C),
+        new Apple(120, Corlor.GREEN, Country.V));
 
     public static void printAppleList(List<Apple> apples){
 

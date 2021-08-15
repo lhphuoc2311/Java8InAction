@@ -10,7 +10,9 @@ public class SortingApplesTestDrive {
     public static void main(String[] args) {
         List<Apple> inventory = Util.inventoryApples;
 
-        inventory.sort(comparing(Apple::getWeight).reversed());
+        inventory.sort(comparing(Apple::getWeight)
+        .reversed()
+        .thenComparing(Apple::getCountry));
 
         Util.printAppleList(inventory);
     }
