@@ -13,7 +13,7 @@ public class FilteringLowCaloricDishesNameJ8TestDrive {
                                            //Dish::getCalories
 
         List<String> lowCaloricDishesName =
-            menu.stream()
+            menu.parallelStream()
             .filter(dish -> dish.getCalories() < 400)
             .sorted(comparing(Dish::getCalories))
             .map(Dish::getName)
@@ -24,7 +24,7 @@ public class FilteringLowCaloricDishesNameJ8TestDrive {
         }
 
 
-        
+
     }
     
 }
