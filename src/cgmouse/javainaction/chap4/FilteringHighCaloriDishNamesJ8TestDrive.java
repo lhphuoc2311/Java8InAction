@@ -22,6 +22,11 @@ public class FilteringHighCaloriDishNamesJ8TestDrive {
 
         System.out.println(threeHighCaloricDishNames);
 
+
+        //TERMINAL OPERATIONS
+      
+        menu.stream().forEach(dish -> System.out.println(dish.getName()));
+
     }
     
 }
