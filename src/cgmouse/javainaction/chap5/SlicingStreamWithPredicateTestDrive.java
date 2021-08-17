@@ -24,7 +24,13 @@ public class SlicingStreamWithPredicateTestDrive {
             .collect(java.util.stream.Collectors.toList());
         System.out.println("slicing: " + slicedMenu1);
 
-        
+        //print data by using forEach
+
+        specialMenu.stream()
+        .takeWhile(dish -> dish.getCalories() < 320)
+        .forEach(dish -> System.out.println(dish.getName()));
+
+
     }
 
 }
