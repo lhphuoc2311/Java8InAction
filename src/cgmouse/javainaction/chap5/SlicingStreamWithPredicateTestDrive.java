@@ -3,6 +3,8 @@ package cgmouse.javainaction.chap5;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.print.DocFlavor.STRING;
+
 public class SlicingStreamWithPredicateTestDrive {
 
     public static void main(String[] args) {
@@ -29,6 +31,15 @@ public class SlicingStreamWithPredicateTestDrive {
         specialMenu.stream()
         .takeWhile(dish -> dish.getCalories() < 320)
         .forEach(dish -> System.out.println(dish.getName()));
+
+        List<Dish> slicedMenu2 = 
+                specialMenu.stream()
+                .dropWhile(dish -> dish.getCalories() < 320)
+                .collect(java.util.stream.Collectors.toList());
+        System.out.println(slicedMenu2);
+
+        
+        
 
 
     }
