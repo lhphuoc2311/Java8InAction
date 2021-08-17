@@ -15,6 +15,13 @@ public class TruncatingStreamTestDrive {
             .collect(java.util.stream.Collectors.toList());
 
         System.out.println(threeDishGT300Caloric);
+
+        //skipping the first two dishes that have more than 300 calories
+
+        Dish.specialMenu.stream()
+            .filter(dish -> dish.getCalories() > 300)
+            .skip(2)
+            .forEach(dish -> System.out.println(dish.getName()));
         
     }
     
