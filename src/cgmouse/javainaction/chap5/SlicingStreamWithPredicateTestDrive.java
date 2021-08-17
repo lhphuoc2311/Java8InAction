@@ -3,7 +3,6 @@ package cgmouse.javainaction.chap5;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.print.DocFlavor.STRING;
 
 public class SlicingStreamWithPredicateTestDrive {
 
