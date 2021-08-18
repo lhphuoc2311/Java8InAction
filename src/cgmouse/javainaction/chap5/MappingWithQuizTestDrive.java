@@ -26,11 +26,12 @@ public class MappingWithQuizTestDrive {
         //this is wrong
         List<int[]> pairs = 
             numbers1.stream()//Stream<Integer>
-                .map(num1 -> numbers2.stream()
+                .flatMap(num1 -> numbers2.stream()
                                     .map(num2 -> new int[]{num1, num2})
                     )//Stream<Stream<Integer[]>>
                 .collect(java.util.stream.Collectors.toList());
 
+        System.out.println(pairs);
     }
     
 }
