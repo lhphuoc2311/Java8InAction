@@ -36,12 +36,12 @@ public class MappingWithQuizTestDrive {
 
         //return only pairs whose sum is divisible by 3
         List<int[]> divisibleBy3Pairs = 
-        numbers1.stream()//Stream<Integer>
-            .flatMap(num1 -> numbers2.stream()
+            numbers1.stream()//Stream<Integer>
+                .flatMap(num1 -> 
+                            numbers2.stream()
+                                .filter(num2 -> (num1 + num2) % 3 == 0)
                                 .map(num2 -> new int[]{num1, num2})
                 )//Stream<Stream<Integer[]>>
-            
-            .filter(element -> (element[0] + element[1]) % 3 == 0)
             
             .collect(java.util.stream.Collectors.toList());
 
