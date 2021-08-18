@@ -29,9 +29,27 @@ public class MappingWithQuizTestDrive {
                 .flatMap(num1 -> numbers2.stream()
                                     .map(num2 -> new int[]{num1, num2})
                     )//Stream<Stream<Integer[]>>
+                
                 .collect(java.util.stream.Collectors.toList());
 
         System.out.println(pairs);
+
+        //return only pairs whose sum is divisible by 3
+        List<int[]> divisibleBy3Pairs = 
+        numbers1.stream()//Stream<Integer>
+            .flatMap(num1 -> numbers2.stream()
+                                .map(num2 -> new int[]{num1, num2})
+                )//Stream<Stream<Integer[]>>
+            
+            .filter(element -> (element[0] + element[1]) % 3 == 0)
+            
+            .collect(java.util.stream.Collectors.toList());
+
+    System.out.println(divisibleBy3Pairs);
+
+
+
+
     }
     
 }
