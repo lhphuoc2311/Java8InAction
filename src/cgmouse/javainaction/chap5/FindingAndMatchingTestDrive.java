@@ -27,7 +27,12 @@ public class FindingAndMatchingTestDrive {
         Optional<Dish> dish = 
             Dish.menu.stream()
                      .filter(Dish::isVegetarian)
-                     .findAny();
+                     .findAny();//Return Optional<Dish>
+
+        Dish.menu.stream()
+                .filter(Dish::isVegetarian)
+                .findAny()//Return an Optional<Dish>
+                .ifPresent(d -> System.out.println(d.getName()));
     }
     
 }
