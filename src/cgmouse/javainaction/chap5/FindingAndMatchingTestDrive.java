@@ -1,5 +1,7 @@
 package cgmouse.javainaction.chap5;
 
+import java.util.Optional;
+
 public class FindingAndMatchingTestDrive {
     public static void main(String[] args) {
         
@@ -19,6 +21,13 @@ public class FindingAndMatchingTestDrive {
         //using terminal operation noneMatch method
         boolean isHealthy1 = Dish.menu.stream()
                                     .noneMatch(dish -> dish.getCalories() >= 1000);
+
+        // find out an arbitary (tùy ý) element of the current stream
+        // find a dish that is vegetarian
+        Optional<Dish> dish = 
+            Dish.menu.stream()
+                     .filter(Dish::isVegetarian)
+                     .findAny();
     }
     
 }
