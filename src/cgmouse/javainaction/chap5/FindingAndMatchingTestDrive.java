@@ -1,5 +1,7 @@
 package cgmouse.javainaction.chap5;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 public class FindingAndMatchingTestDrive {
@@ -33,6 +35,15 @@ public class FindingAndMatchingTestDrive {
                 .filter(Dish::isVegetarian)
                 .findAny()//Return an Optional<Dish>
                 .ifPresent(d -> System.out.println(d.getName()));
+
+        //finds the first square that is divisible by 3
+
+        List<Integer> someNumbers = Arrays.asList(1, 2, 3, 4, 5);
+        someNumbers.stream()
+                    .map(num -> num * num)//Stream<Integer * Integer>
+                    .filter(num -> num % 3 == 0)//Stream<Integer>
+                    .findFirst()//terminal operation => return Optional<Integer>
+                    .ifPresent(num -> System.out.println(num));
     }
     
 }
