@@ -18,7 +18,7 @@ public class ReducingStreamTestDrive {
 
         // Using reduce method over list of numbers to sum
 
-        int sum2 = someNumbers.stream().reduce(0, (num1, num2) -> num1 + num2);
+        int sum2 = someNumbers.stream().reduce(0, Integer::sum);
         System.out.println(sum2);
 
         // using reduce method to multiply
