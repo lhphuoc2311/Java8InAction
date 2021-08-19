@@ -20,6 +20,12 @@ public class ReducingStreamTestDrive {
 
         int sum2 = someNumbers.stream().reduce(0, (num1, num2) -> num1 + num2);
         System.out.println(sum2);
+
+        // using reduce method to multiply
+        int multi = someNumbers.stream()
+                                .reduce(1, (num1, num2) -> num1 * num2);
+
+        System.out.println("Multiplying: " + multi);
     }
 
 }
