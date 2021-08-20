@@ -8,10 +8,14 @@ public class SequentialSumingTestDrive {
         System.out.println(sum);
     }
 
+    //using internal iterative stream
     public static long sequentialSum(long n) {
             return Stream.iterate(1L, num -> num + 1)
             .limit(n)
             .reduce(0L, Long::sum);
     }
+
+    
+
     
 }
