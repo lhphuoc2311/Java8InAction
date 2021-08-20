@@ -26,6 +26,13 @@ public class ReducingStreamTestDrive {
                                 .reduce(1, (num1, num2) -> num1 * num2);
 
         System.out.println("Multiplying: " + multi);
+
+        //Using reduce that doesn't take an inital value, return a Optional
+
+        someNumbers.stream()
+                    .reduce((num1, num2) -> (num1 + num2))//Optional<Integer>
+                    .ifPresent(num -> System.out.println(num));
+
     }
 
 }
