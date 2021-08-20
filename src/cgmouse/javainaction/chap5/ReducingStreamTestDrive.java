@@ -42,7 +42,7 @@ public class ReducingStreamTestDrive {
 
         Optional<Integer> min = 
             someNumbers.stream()
-                        .reduce(Integer::min);
+                        .reduce((num1, num2) -> num1 < num2 ? num1 : num2);
         System.out.println("Min: " + min.get());
 
 
