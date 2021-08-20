@@ -2,6 +2,7 @@ package cgmouse.javainaction.chap5;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class ReducingStreamTestDrive {
     public static void main(String[] args) {
@@ -32,6 +33,18 @@ public class ReducingStreamTestDrive {
         someNumbers.stream()
                     .reduce((num1, num2) -> (num1 + num2))//Optional<Integer>
                     .ifPresent(num -> System.out.println(num));
+        
+        //To compute maxima and minima
+        Optional<Integer> max = 
+            someNumbers.stream()
+                        .reduce(Integer::max);
+        System.out.println("Max: " + max.get());
+
+        Optional<Integer> min = 
+            someNumbers.stream()
+                        .reduce(Integer::min);
+        System.out.println("Min: " + min.get());
+
 
     }
 
