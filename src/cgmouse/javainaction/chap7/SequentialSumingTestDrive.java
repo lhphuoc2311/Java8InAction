@@ -15,6 +15,15 @@ public class SequentialSumingTestDrive {
             .reduce(0L, Long::sum);
     }
 
+    //the equivalent to its eterative counterpart (external iteration)
+    public long iterativeSum(long n){
+        long result = 0;
+        for(long i = 1L; i <= n; i++){
+            result += i;
+        }
+        return result;
+    }
+
     
 
     
