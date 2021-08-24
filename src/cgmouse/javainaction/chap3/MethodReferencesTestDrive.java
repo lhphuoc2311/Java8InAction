@@ -13,6 +13,9 @@ public class MethodReferencesTestDrive {
         inventory.sort((a1, a2) -> a1.getWeight().compareTo(a2.getWeight()));
 
         inventory.sort(java.util.Comparator.comparing(apple -> apple.getWeight()));
+
+        // Using method reference
+        inventory.sort(java.util.Comparator.comparing(Apple::getWeight));
     }
 
 }
